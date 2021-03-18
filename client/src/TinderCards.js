@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import './TinderCards.css'
-import TinderCard from 'react-tinder-card'
-import { SwipeableDrawer } from '@material-ui/core';
+import TinderCard from "react-tinder-card";
+
+
 
 const TinderCards = () => {
   const [ people, setPeople ] = useState([ {
@@ -32,8 +33,10 @@ const TinderCards = () => {
             onSwipe={ (dir) => swiped(dir, person.name) }
             onCardLeftScreen={()=> outOfFrame(person.name)}
           >
-            <div className="card" style={ { backgroundImage: `url(${person.url})` } }></div>
+            <div className="card" style={ { backgroundImage: `url(${person.url})` } }>
+
             <h3>{ person.name }</h3>
+            </div>
           </TinderCard>
 
         ))}
